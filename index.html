@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Movie View Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* Toggle Buttons */
+    .view-toggle {
+      margin-bottom: 20px;
+    }
+
+    .view-toggle button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    /* Container */
+    .movie-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Movie Card */
+    .movie {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .grid .movie {
+      width: 30%;
+    }
+
+    .list {
+      flex-direction: column;
+    }
+
+    .list .movie {
+      display: flex;
+      width: 100%;
+    }
+
+    .list .movie img {
+      width: 120px;
+      height: auto;
+      margin-right: 15px;
+    }
+
+    .movie img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .details {
+      margin-top: 10px;
+    }
+
+    .list .details {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="view-toggle">
+    <button onclick="document.querySelector('.movie-container').className = 'movie-container grid'">Grid View</button>
+    <button onclick="document.querySelector('.movie-container').className = 'movie-container list'">List View</button>
+  </div>
+
+  <div class="movie-container grid">
+    <div class="movie">
+      <img src="poster1.jpg" alt="Movie 1">
+      <div class="details">
+        <h3>Inception</h3>
+        <p>Rating: 8.8</p>
+        <p>Genre: Sci-Fi</p>
+      </div>
+    </div>
+
+    <div class="movie">
+      <img src="poster2.jpg" alt="Movie 2">
+      <div class="details">
+        <h3>Interstellar</h3>
+        <p>Rating: 8.6</p>
+        <p>Genre: Adventure</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
